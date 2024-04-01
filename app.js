@@ -13,11 +13,18 @@ app.get('/clientes', (req, res) => {
     res.json(clientes);
   });
   
-  // Ruta para mostrar 3 productos
+  // DAtos para los productos y la ruta
+const productos = [
+    { nombre: 'Celular', precio: 500, stock: 10 },
+    { nombre: 'Laptop-2024', precio: 1200, stock: 5 },
+    { nombre: 'Tablet', precio: 300, stock: 8 }
+  ];
+  
+  // Ruta para mostrar los productos con nombre, precio y stock
   app.get('/productos', (req, res) => {
-    const productos = ['Celular', 'Laptop-2024', 'Tablet'];
     res.json(productos);
   });
+  
 
 app.get('/', (req, res) => {
     res.status(200).send('Pagina Principal')
